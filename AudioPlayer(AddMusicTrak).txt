@@ -1,0 +1,13 @@
+// AudioPlayer(AddMusicTrak).txt 
+
+DoModule SetLanguage
+
+HideObject("AddMusicTrak")
+HideObject("TextAddMusicTrak")
+
+HideObject("AudioPlayerImage")
+strAddMusicTrak = "https://musify.club/track/dl/11605895/latin-alliance-kid-frost-low-rider.mp3"
+UrlText.text = strAddMusicTrak
+
+ShowObject("CleaUrl")
+ShowObject("AudioPlayerMini")
