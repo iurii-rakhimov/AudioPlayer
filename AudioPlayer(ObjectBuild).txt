@@ -1,0 +1,68 @@
+AudioPlayer	LineUp	Label	@	0	50	320	2			255:89:0	2:2:2	0	14	systemFont	center	Label		vertically		
+AudioPlayer	LineUp	Label	@	0	50	568	2			255:89:0	2:2:2	0	14	systemFont	center	Label		horizontally		
+AudioPlayer	LineLeft	Label	@	0	50	2	518			255:89:0	2:2:2	0	14	systemFont	center	Label		vertically		
+AudioPlayer	LineLeft	Label	@	0	50	2	275			255:89:0	2:2:2	0	14	systemFont	center	Label		horizontally		
+AudioPlayer	LineRight	Label	@	318	50	2	518			255:89:0	2:2:2	0	1	systemFont	center	Label		vertically		
+AudioPlayer	LineRight	Label	@	566	50	2	274			255:89:0	2:2:2	0	1	systemFont	center	Label		horizontally		
+AudioPlayer	LineDown	Label	@	0	555	320	12	LineDown		255:89:0	2:2:2	0	14	systemFont	center	Label		vertically		
+AudioPlayer	LineDown	Label	@	0	312	568	7	LineDown		255:89:0	2:2:2	0	14	systemFont	center	Label		horizontally		
+AudioPlayer	Message	Label	@	5	150	310	30	Message		255:255:255	2:2:2	0	16	systemFont	center	Label		vertically		
+AudioPlayer	Message	Label	@	4	150	170	30	Message		255:255:255	2:2:2	0	16	systemFont	center	Label		horizontally		
+AudioPlayer	UrlTrak	Label	@	126	240	68	20	UrlTrak	Url трека	255:255:255	2:2:2	0	14	systemFont	center	Label		vertically		
+AudioPlayer	UrlTrak	Label	@	249	210	70	25	UrlTrak	Url трека	255:255:255	2:2:2	0	14	systemFont	center	Label		horizontally		
+AudioPlayer	SaveMusicTrak	Label	@	40	150	240	30	SaveMusicTrak	Записать трек	79:100:160	255:255:255	15	17	boldSystemFont	center	Label		vertically		
+AudioPlayer	SaveMusicTrak	Label	@	154	150	260	30	SaveMusicTrak	Записать трек	79:100:160	255:255:255	15	17	boldSystemFont	center	Label		horizontally		
+AudioPlayer	AudioPlayerImage	Image	@	10	235	300	300	LoadData	255:255:255	242:242:242	0	QuickPlayer260x260		vertically	
+AudioPlayer	AudioPlayerImage	Image	@	154	51	220	220	LoadData	255:255:255	242:242:242	0	QuickPlayer260x260		horizontally	
+AudioPlayer	TimeStart	Label	@	50	26	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+AudioPlayer	TimeStart	Label	@	50	26	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+AudioPlayer	TimeEnd	Label	@	220	26	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+AudioPlayer	TimeEnd	Label	@	480	26	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+AudioPlayer	RapeatMusicArtist	Image	@	260	55	50	50	RapeatMusicArtist	255:255:255	242:242:242	0	Repeat100x100		vertically	
+AudioPlayer	RapeatMusicArtist	Image	@	510	55	50	50	RapeatMusicArtist	255:255:255	242:242:242	0	Repeat100x100		horizontally	
+AudioPlayer	ContinueMusicArtist	Image	@	5	55	50	50	ContinueMusicArtist	255:255:255	242:242:242	0	Run40x40		vertically	
+AudioPlayer	ContinueMusicArtist	Image	@	5	55	50	50	ContinueMusicArtist	255:255:255	242:242:242	0	Run40x40		horizontally	
+AudioPlayer	StopMusicArtist	Image	@	5	55	50	50	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		vertically	
+AudioPlayer	StopMusicArtist	Image	@	10	55	50	50	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		horizontally	
+AudioPlayer	AddMusicTrak	Image	@	60	20	25	25	AddMusicTrak	242:242:242	242:242:242	0	Add40x40		vertically	
+AudioPlayer	AddMusicTrak	Image	@	180	20	25	25	AddMusicTrak	242:242:242	242:242:242	0	Add40x40		horizontally	
+AudioPlayer	TextAddMusicTrak	Label	@	93	20	100	25	AddMusicTrak	Добавить трек	242:242:242	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	TextAddMusicTrak	Label	@	209	20	150	25	AddMusicTrak	Добавить трек	242:242:242	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	UrlText	TextView	@	85	284	230	200			https://musify.club/track/dl/11605895/latin-alliance-kid-frost-low-rider.mp3	242:242:242	2:2:2	0	14	systemFont		vertically	vertically		
+AudioPlayer	UrlText	TextView	@	86	235	480	40				242:242:242	2:2:2	0	14	systemFont		horizontally	horizontally		
+AudioPlayer	CleaUrl	Image	@	20	284	50	50	CleaUrl	255:255:255	242:242:242	0	Clea40x40		vertically	
+AudioPlayer	CleaUrl	Image	@	15	230	50	50	CleaUrl	255:255:255	242:242:242	0	Clea40x40		horizontally	
+AudioPlayer	ScaleOld	Label	@	5	540	310	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		vertically		
+AudioPlayer	ScaleOld	Label	@	4	298	560	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+AudioPlayer	Slider	Label	@	5	540	14	14	Slider	текст	255:128:0	2:2:2	7	22	systemFont	center	Label		vertically		
+AudioPlayer	Slider	Label	@	5	298	14	14	Slider	текст	255:128:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+AudioPlayer	ScaleNew	Label	@	8	543	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		vertically		
+AudioPlayer	ScaleNew	Label	@	8	301	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		horizontally		
+AudioPlayer	TestUrlTrak	Label	@	10	185	300	20	TestUrlTrak	Следующий тест записи трека с Url	79:100:160	255:255:255	10	14	systemFont	center	Label		vertically		
+AudioPlayer	TestUrlTrak	Label	@	134	190	300	20	TestUrlTrak	Test Url	79:100:160	255:255:255	10	14	systemFont	center	Label		horizontally		
+AudioPlayer	MusicArtist	Label	@	70	55	180	90		MusicArtist	255:255:255	2:2:2	0	14	systemFont	center	Label		vertically		
+AudioPlayer	MusicArtist	Label	@	70	55	440	50		MusicArtist	255:255:255	2:2:2	0	15	systemFont	center	Label		horizontally		
+AudioPlayer	Language	Label	@	273	26	20	20	Language	🇷🇺	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+AudioPlayer	Language	Label	@	400	26	20	20	Language	🇷🇺	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+AudioPlayer	AudioPlayerMini	Image	@	147	20	25	25	LoadData	195:195:195	242:242:242	12	QuickPlayer260x260		vertically	
+AudioPlayer	AudioPlayerMini	Image	@	147	20	25	25	LoadData	242:242:242	242:242:242	12	QuickPlayer260x260		horizontally	
+AudioPlayer	View1	Label	@	11	210	32	20			255:0:0	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View1	Label	@	5	278	61	20			255:0:0	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View2	Label	@	44	210	32	20			255:128:0	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View2	Label	@	67	278	61	20			255:128:0	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View3	Label	@	77	210	32	20			255:255:0	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View3	Label	@	129	278	61	20			255:255:0	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View4	Label	@	110	210	32	20			204:255:0	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View4	Label	@	191	278	61	20			204:255:0	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View5	Label	@	143	210	32	20			128:255:0	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View5	Label	@	253	278	61	20			128:255:0	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View6	Label	@	176	210	32	20			0:255:255	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View6	Label	@	315	278	61	20			0:255:255	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View7	Label	@	209	210	32	20			0:128:255	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View7	Label	@	377	278	61	20			0:128:255	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View8	Label	@	242	210	32	20			0:0:255	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View8	Label	@	439	278	61	20			0:0:255	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	View9	Label	@	275	210	33	20			230:0:255	2:2:2	0	10	systemFont	центр	Label		vertically		
+AudioPlayer	View9	Label	@	501	278	61	20			230:0:255	2:2:2	0	10	systemFont	центр	Label		horizontally		
+AudioPlayer	Test1	Image	@	19	120	25	25	Test1	195:195:195	242:242:242	12	QuickPlayer260x260		vertically	
+AudioPlayer	Test2	Image	@	283	122	25	25	Test2	242:242:242	242:242:242	0	Add40x40		vertically	
