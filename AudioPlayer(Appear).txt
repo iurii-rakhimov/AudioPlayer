@@ -1,0 +1,49 @@
+// AudioPlayer(Appear).txt 
+
+HideObject("Test1")
+HideObject("Test2")
+
+HideObject("ScaleNew")
+HideObject("Slider")
+HideObject("ScaleOld")
+
+HideObject("MusicArtist")
+
+HideObject("AudioPlayerMini")
+
+ShowObject("AddMusicTrak")
+ShowObject("TextAddMusicTrak")
+
+HideObject("TestUrlTrak")
+HideObject("UrlTrak")
+HideObject("UrlText")
+HideObject("SaveMusicTrak")
+
+HideObject("StopMusicArtist")
+HideObject("ContinueMusicArtist")
+HideObject("RapeatMusicArtist")
+HideObject("TimeStart")
+HideObject("TimeEnd")
+
+HideObject("CleaUrl")
+
+HideObject("View1")
+HideObject("View2")
+HideObject("View3")
+HideObject("View4")
+HideObject("View5")
+HideObject("View6")
+HideObject("View7")
+HideObject("View8")
+HideObject("View9")
+
+yUp = LineUp.Y
+yDown = LineDown.Y
+heightImage = AudioPlayerImage.Height
+yOffset = yDown - yUp - heightImage
+yOffset = ConvertFloatToInt(yOffset / 2)
+yImage = yUp + yOffset
+AudioPlayerImage.Y = yImage
+AudioPlayerImage.File = "QuickPlayer260x260"
+
+^FlagAudioPlayer = ""
