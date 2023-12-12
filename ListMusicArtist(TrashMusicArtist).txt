@@ -1,0 +1,17 @@
+// ListMusicArtist(TrashMusicArtist).txt
+
+index = ^indexCellListMusicArtist
+
+NameFile = ^NameMusicArtist
+Path = GetPathDirectoryDocument()
+Path = Path + ^Folder + "/"
+PathNameFile = Path + NameFile
+kv = RemoveFile(PathNameFile)
+if kv != 0
+{
+	MusicArtist.text = Dictionary("не возможно удаление файла")
+	return
+}
+MusicArtist.text = ""
+
+ExitForm
