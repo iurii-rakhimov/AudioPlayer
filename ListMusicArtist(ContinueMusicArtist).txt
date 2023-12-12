@@ -1,0 +1,22 @@
+// ListMusicArtist(ContinueMusicArtist).txt 
+
+PlayerContinue()
+
+HideObject("ContinueMusicArtist")
+StopMusicArtist.File = "RunStop40x40"
+
+statusObject = GetStatusObject("Image")
+if statusObject == "false"
+{
+	HideObject("TrashFolder")
+	HideObject("TrashFolderText")
+
+	return
+}
+HideObject("CopyMusicArtist")
+HideObject("TrashMusicArtist")
+HideObject("PasteMusicArtist")
+
+ShowObject("TimeStart")
+ShowObject("TimeEnd")
+ShowObject("Folder")
