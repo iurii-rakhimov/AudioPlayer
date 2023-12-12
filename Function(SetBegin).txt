@@ -1,0 +1,16 @@
+function SetBegin()
+{
+	xScale = ScaleOld.X
+
+	ScaleNew.X = xScale
+	ScaleNew.Width = 1
+	ScaleNew.text = ""
+
+	Slider.X = xScale
+	Slider.text = " "
+
+	HideObject("StopMusicArtist")
+	ShowObject("ContinueMusicArtist")
+
+	return
+}
