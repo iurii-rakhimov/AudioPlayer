@@ -1,0 +1,19 @@
+// ListMusicArtist(DoubleRight).txt 
+
+count = CountElementsOfArray(^ArrayFolderPlayMusic)
+indexCell = ^indexCellListMusicArtist + 1
+if indexCell >= count
+{
+	indexCell = 0
+}
+^NameMusicArtist = ^ArrayFolderPlayMusic[indexCell]
+^indexCellListMusicArtist = indexCell - 1
+
+strMessage = Dictionary("Ждите-Загружаются трек ") 
+strMessage = strMessage + ^NameMusicArtist
+MusicArtist.text = strMessage
+HideObject("DoubleLeft")
+HideObject("DoubleRight")
+HideObject("ImageMini")
+
+DoModule PlayMusicArtist, wait=100, message=strMessage
