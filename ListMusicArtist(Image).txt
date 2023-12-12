@@ -1,0 +1,21 @@
+// ListMusicArtist(Image).txt 
+
+HideObject("Image")
+ShowObject("ImageMini")
+HideObject("MusicArtist")
+ShowObject("Rectangle")
+ShowObject("ListMusicArtistTable")
+
+ShowObject("DoubleRight")
+ShowObject("DoubleLeft")
+
+HideObject("Folder")
+
+HideObject("CopyMusicArtist")
+HideObject("TrashMusicArtist")
+HideObject("PasteMusicArtist")
+
+HideObject("TrashFolder")
+HideObject("TrashFolderText")
+
+^FlagView = "Image"
