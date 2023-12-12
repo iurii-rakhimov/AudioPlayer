@@ -1,0 +1,14 @@
+// ListArtist(TrashFolder).txt
+
+NameFile = ^NameMusicArtist
+Path = GetPathDirectoryDocument()
+PathNameFile = Path + NameFile
+kv = RemoveFile(PathNameFile)
+if kv == 0
+{
+	Artist.text = "не возможно удаление файла"
+	return
+}
+
+DoModule Main
+DoModule Appear
