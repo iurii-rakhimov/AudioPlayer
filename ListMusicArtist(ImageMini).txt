@@ -1,0 +1,16 @@
+// ListMusicArtist(ImageMini).txt 
+
+ShowObject("Image")
+HideObject("ImageMini")
+ShowObject("MusicArtist")
+HideObject("Rectangle")
+HideObject("ListMusicArtistTable")
+
+HideObject("CopyMusicArtist")
+HideObject("TrashMusicArtist")
+HideObject("PasteMusicArtist")
+
+HideObject("TrashFolder")
+HideObject("TrashFolderText")
+
+^FlagView = "ImageMini"
