@@ -1,0 +1,44 @@
+ListMusicArtist	Rectangle	Label	@	3	108	315	444			2:2:2	2:2:2	0	22	systemFont	center	Label		vertically		
+ListMusicArtist	Rectangle	Label	@	3	105	560	190			2:2:2	2:2:2	0	22	systemFont	center	Label		horizontally		
+ListMusicArtist	ListMusicArtistTable	TableView	@	4	110	313	440	SelectMusicArtist	ListMusicArtist&NameArtist&Label&@&14&0&210&14&&NameMusicArtist&255:255:255&2:2:2&0&8&systemFont&влево&Label&&vertically&&#ListMusicArtist&ImageArtist&Image&@&0&1&11&11&&242:242:242&242:242:242&0.0&Help100x100&&vertically&	vertically										
+ListMusicArtist	ListMusicArtistTable	TableView	@	4	106	558	187	SelectMusicArtist	ListMusicArtist&NameArtist&Label&@&14&0&210&14&&NameArtist&255:255:255&2:2:2&0&8&systemFont&влево&Label&&horizontally&&#ListMusicArtist&ImageArtist&Image&@&0&1&11&11&&242:242:242&242:242:242&0&Help100x100&&horizontally&	horizontally										
+ListMusicArtist	Folder	Label	@	90	25	150	20	Folder	Folder	242:242:242	2:2:2	0	14	systemFont	center	Label		vertically		
+ListMusicArtist	Folder	Label	@	109	25	350	20	Folder	Folder	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+ListMusicArtist	ContinueMusicArtist	Image	@	0	51	50	50	ContinueMusicArtist	255:255:255	242:242:242	0	Run40x40		vertically	
+ListMusicArtist	ContinueMusicArtist	Image	@	0	51	50	50	ContinueMusicArtist	255:255:255	242:242:242	0	Run40x40		horizontally	
+ListMusicArtist	TimeStart	Label	@	40	25	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+ListMusicArtist	TimeStart	Label	@	40	25	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+ListMusicArtist	TimeEnd	Label	@	240	25	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+ListMusicArtist	TimeEnd	Label	@	481	25	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+ListMusicArtist	RapeatMusicArtist	Image	@	270	51	50	50	RapeatMusicArtist	255:255:255	242:242:242	0	Repeat100x100		vertically	
+ListMusicArtist	RapeatMusicArtist	Image	@	517	51	50	50	RapeatMusicArtist	255:255:255	242:242:242	0	Repeat100x100		horizontally	
+ListMusicArtist	StopMusicArtist	Image	@	0	51	50	50	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		vertically	
+ListMusicArtist	StopMusicArtist	Image	@	0	51	50	50	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		horizontally	
+ListMusicArtist	CopyMusicArtist	Image	@	100	20	25	25	CopyMusicArtist	242:242:242	242:242:242	0	Copy40x40		vertically	
+ListMusicArtist	CopyMusicArtist	Image	@	110	20	25	25	CopyMusicArtist	242:242:242	242:242:242	0	Copy40x40		horizontally	
+ListMusicArtist	TrashMusicArtist	Image	@	157	20	25	25	TrashMusicArtist	242:242:242	242:242:242	0	Trash40x40		vertically	
+ListMusicArtist	TrashMusicArtist	Image	@	271	20	25	25	TrashMusicArtist	242:242:242	242:242:242	0	Trash40x40		horizontally	
+ListMusicArtist	PasteMusicArtist	Image	@	210	20	25	25	PasteMusicArtist	242:242:242	242:242:242	0	Paste40x40		vertically	
+ListMusicArtist	PasteMusicArtist	Image	@	422	20	25	25	PasteMusicArtist	242:242:242	242:242:242	0	Paste40x40		horizontally	
+ListMusicArtist	ScaleOld	Label	@	5	553	310	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		vertically		
+ListMusicArtist	ScaleOld	Label	@	5	298	556	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+ListMusicArtist	ScaleNew	Label	@	7	556	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		vertically		
+ListMusicArtist	ScaleNew	Label	@	7	301	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		horizontally		
+ListMusicArtist	Slider	Label	@	5	553	14	14	Slider	текст	255:128:0	2:2:2	7	22	systemFont	center	Label		vertically		
+ListMusicArtist	Slider	Label	@	5	298	14	14	Slider	текст	255:128:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+ListMusicArtist	MusicArtist	Label	@	55	51	210	57	MusicArtist	MusicArtist	255:255:255	2:2:2	0	10	systemFont	center	Label		vertically		
+ListMusicArtist	MusicArtist	Label	@	55	51	460	53	MusicArtist	MusicArtist	255:255:255	2:2:2	0	10	systemFont	center	Label		horizontally		
+ListMusicArtist	Image	Image	@	0	178	320	320	Image	255:255:255	242:242:242	0	Notes1200x1200		vertically	
+ListMusicArtist	Image	Image	@	191	107	186	186	Image	255:255:255	242:242:242	0	Notes1200x1200		horizontally	
+ListMusicArtist	ImageMini	Image	@	135	51	50	50	ImageMini	255:255:255	242:242:242	0	Notes40x40		vertically	
+ListMusicArtist	ImageMini	Image	@	259	51	50	50	ImageMini	255:255:255	242:242:242	0	Notes40x40		horizontally	
+ListMusicArtist	TrashFolder	Image	@	100	20	25	25	MessageTrashFolder	242:242:242	242:242:242	0	Trash40x40		vertically	
+ListMusicArtist	TrashFolderText	Label	@	130	25	100	20	MessageTrashFolder	Удаление папки	242:242:242	2:2:2	0	12	systemFont	влево	Label		vertically		
+ListMusicArtist	TrashFolder	Image	@	100	20	25	25	MessageTrashFolder	242:242:242	242:242:242	0	Trash40x40		horizontally	
+ListMusicArtist	TrashFolderText	Label	@	130	25	100	20	MessageTrashFolder	Удаление папки	242:242:242	2:2:2	0	12	systemFont	влево	Label		horizontally		
+ListMusicArtist	DoubleLeft	Image	@	66	51	50	50	DoubleLeft	255:255:255	242:242:242	0	DoubleLeft40x40		vertically	
+ListMusicArtist	DoubleLeft	Image	@	137	51	50	50	DoubleLeft	255:255:255	242:242:242	0	DoubleLeft40x40		horizontally	
+ListMusicArtist	DoubleRight	Image	@	206	51	50	50	DoubleRight	255:255:255	242:242:242	0	DoubleRight40x40		vertically	
+ListMusicArtist	DoubleRight	Image	@	382	51	50	50	DoubleRight	255:255:255	242:242:242	0	DoubleRight40x40		horizontally	
+ListMusicArtist	TrashFolderOk	Image	@	270	51	50	50	TrashFolder	255:255:255	242:242:242	0	OkGreen512		vertically	
+ListMusicArtist	TrashFolderOk	Image	@	517	51	50	50	TrashFolder	255:255:255	242:242:242	0	OkGreen512		horizontally	
