@@ -1,0 +1,20 @@
+// ListMusicArtist(MessageTrashFolder).txt 
+
+PlayerStop()
+
+MusicArtist.text = Dictionary("Подтвердите удаление папки. Нажми 'Ok'")
+
+ShowObject("TrashFolderOk")
+
+HideObject("ContinueMusicArtist")
+HideObject("StopMusicArtist")
+HideObject("RapeatMusicArtist")
+
+HideObject("ListMusicArtistTable")
+HideObject("Rectangle")
+
+HideObject("TimeStart")
+HideObject("TimeEnd")
+
+HideObject("TrashFolder")
+HideObject("TrashFolderText")
