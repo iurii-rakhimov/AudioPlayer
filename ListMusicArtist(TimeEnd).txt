@@ -1,0 +1,4 @@
+// ListMusicArtist(TimeEnd).txt
+
+StopModule("Slider")
+MusicArtist.text = "StopModule - Slider"
