@@ -1,0 +1,14 @@
+// Function(Scale).txt
+
+function Scale()
+{
+	x = GetCoordinateTouchPointX()
+	scaleOldX = ScaleOld.X
+	widthNewScale = x - scaleOldX
+	scaleOldWidth = ScaleOld.Width
+	seek = ^DurationSecondsAudioFile / scaleOldWidth * widthNewScale
+	seek = OnlyWhole(seek)
+	PlayerSeek(seek)
+	
+	return
+}
