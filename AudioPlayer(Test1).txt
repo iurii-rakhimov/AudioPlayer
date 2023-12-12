@@ -1,0 +1,11 @@
+// AudioPlayer(Test1).txt
+
+Path = GetPathDirectoryDocument()
+NameFile = "Notes40x40.png"
+PathAndNameFile = Path + NameFile
+lenFile = FileReadBinaryBufferMemory(PathAndNameFile)
+Message.text = "lenFile=" + lenFile
+ConvertBufferBinaryMemoryToBufferString()
+PathAndNameFile = Path + "Tmp.txt"
+kv = FileWriteStringFromBufferMemory(PathAndNameFile)
+MusicArtist.text = "Записали kv=" + kv
