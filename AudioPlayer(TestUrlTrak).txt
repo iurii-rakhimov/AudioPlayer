@@ -1,0 +1,95 @@
+// AudioPlayer(TestUrlTrak).txt
+
+switch ^Test
+{
+case 0:
+	urlText = "https://musify.club/track/dl/3385168/mythos-rain.mp3"
+	break
+case 1:
+	urlText = "https://moa.hotmo.org/get/music/20170905/Karunesh_-_Aeon_48232816.mp3"
+	break
+case 2:
+	urlText = "https://musify.club/track/dl/1966410/richard-clayderman-ballade-pour-adeline-piano-et-orchestre.mp3"
+	break
+case 3:
+	urlText = "https://d4.hotplayer.ru/download/7140220d974c86e5c9660a38a0059b05/-2001313665_63313665/e0702af20cd2-68eaec1df12-16e1c1d14401/Chalease%20feat.%20Sincerely%20Collins%20-%20Low%20Rider%20%28feat.%20Sincerely%20Collins%29.mp3"
+	break
+case 4:
+	urlText = "https://drivemusic.me/dl/OxCs7YzoJ17Ghmt-bnPotw/1636316453/download_music/2014/02/a-ha-lifelines.mp3"
+	break
+case 5:
+	urlText = "https://musify.club/track/dl/23717/laibach-across-the-universe.mp3"
+	break
+case 6:
+	urlText = "https://musify.club/track/dl/2253679/eric-mouquet-flavio-dellisola-amazonia.mp3"
+	break
+case 7:
+	urlText = "https://minty.club/artist/delerium/love-acoustic/delerium-love-acoustic.mp3"
+	break
+case 8:
+	urlText = "https://musify.club/track/dl/259711/delerium-fallen.mp3"
+	break
+case 9:
+	urlText = "https://musify.club/track/dl/259717/delerium-after-all.mp3"
+	break
+case 10:
+	urlText = "https://musify.club/track/dl/1240929/niyaz-iman.mp3"
+	break
+case 11:
+	urlText = "https://moa.hotmo.org/get/music/20181018/Karunesh_-_Punjab_59767431.mp3"
+	break
+case 12:
+	urlText = "https://moa.hotmo.org/get/music/20170902/Moby_-_Everloving_47961126.mp3"
+	break
+case 13:
+	urlText = "https://musify.club/track/dl/396160/bryan-ferry-slave-to-love.mp3"
+	break
+case 14:
+	urlText = "https://musify.club/track/dl/688339/nick-cave-and-the-bad-seeds-where-the-wild-roses-grow-with-kylie-minog.mp3"
+	break
+case 15:
+	urlText = "https://moa.hotmo.org/get/music/20171214/Peter_Gabriel_-_Mercy_Street_51573605.mp3"
+	break
+case 16:
+	urlText = "https://musify.club/track/dl/16246393/tony-savarino-the-savtones-ive-seen-that-face-before.mp3"
+	break
+case 17:
+	urlText = "https://moa.hotmo.org/get/music/20180427/Ron_Ractive_-_Duenen_Sprint_55575130.mp3"
+	break
+case 18:
+	urlText = "https://moa.hotmo.org/get/music/20170902/Sade_-_King_of_Sorrow_47960983.mp3"
+	break
+case 19:
+	urlText = "https://musify.club/track/dl/4427043/sinead-oconnor-the-voice-of-my-doctor.mp3"
+	break
+case 20:
+	urlText = "https://musify.club/track/dl/1279160/zehava-ben-beartzmi.mp3"
+	break
+case 21:
+	urlText = "https://moa.hotmo.org/get/music/20170908/Zohar_-_Elokainu_48402799.mp3"
+	break
+case 22:
+	urlText = "https://moa.hotmo.org/get/music/20170902/Enya_-_Only_Time_47972588.mp3"
+	break
+case 23:
+	urlText = "https://moa.hotmo.org/get/music/20170902/Annie_Lennox_Steven_Lipson_-_A_Whiter_Shade_of_Pale_47961136.mp3"
+	break
+default:
+	urlText = "https://musify.club/track/dl/3743046/grace-jone-ive-seen-that-face-before.mp3"
+	^Test = -1
+}
+
+UrlText.text = urlText
+
+ArrayUrlFile = Components(urlText, "/")
+CountElementsOfArrayUrlFile = CountElementsOfArray(ArrayUrlFile)
+NumberElementOfArray = CountElementsOfArrayUrlFile - 1
+NameAudioFile = ArrayUrlFile[NumberElementOfArray]
+NameAudioFile = UrlDecode(NameAudioFile)
+MusicArtist.text = NameAudioFile
+^Test++
+
+ShowObject("SaveMusicTrak")
+ShowObject("CleaUrl")
+HideObject("AudioPlayerImage")
+HideObject("Message")
