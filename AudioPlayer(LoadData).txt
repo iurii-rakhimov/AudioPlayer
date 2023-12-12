@@ -1,0 +1,8 @@
+// AudioPlayer[LoadData].txt
+
+Remove ^ArrayArtist
+
+HideObject("TimeStart")
+HideObject("TimeEnd")
+
+DoForm ListArtist
