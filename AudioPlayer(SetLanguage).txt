@@ -1,0 +1,41 @@
+// AudioPlayer(SetLanguage).txt 
+
+^ArrayDictionary[0] = "Добавить трек=Add a track"
+^ArrayDictionary[1] = "Следующий тест записи трека с Url=The next test is recording a track with a Url"
+^ArrayDictionary[2] = "Url трека=Track url"
+^ArrayDictionary[3] = "Записать трек=Record a track"
+^ArrayDictionary[4] = "Добавить новую папку=Add a new folder"
+^ArrayDictionary[5] = "Имя папки=Folder Name"
+^ArrayDictionary[6] = "Исполнители=Music artists"
+^ArrayDictionary[7] = "нет произведений=there are no works"
+^ArrayDictionary[8] = "Пустая папка=Empty folder"
+^ArrayDictionary[9] = "Ошибка записи файла=File writing error"
+^ArrayDictionary[10] = "Скопировали. Проверь копию и удали ненужное.=Copied. Check the copy and delete what you don't need."
+^ArrayDictionary[11] = "Читать файл не возможно=It is impossible to read the file"
+^ArrayDictionary[12] = "Не возможно удаление файла=File deletion is not possible"
+^ArrayDictionary[13] = "Файл скопирован в буфер. Выбери папку для переноса трека.=The file has been copied to the clipboard. Choose a folder to transfer the track to."
+^ArrayDictionary[14] = "Копировать=Copy"
+^ArrayDictionary[15] = "Удалить=Remove"
+^ArrayDictionary[16] = "Переименовать=Rename"
+^ArrayDictionary[17] = "Новое имя=New name"
+^ArrayDictionary[18] = "Ошибка=Error"
+^ArrayDictionary[19] = "при переименовании файла=when renaming a file"
+^ArrayDictionary[20] = "Нажмите кнопку 'Paste'=Click the 'Paste' button"
+^ArrayDictionary[21] = "Копируем в папку=Copy to the folder"
+^ArrayDictionary[22] = "Нажми=Press"
+^ArrayDictionary[23] = "Загружается трек-Ждите=The track is being loaded-Wait"
+^ArrayDictionary[24] = "Файл отсутствует=The file is missing"
+^ArrayDictionary[25] = "Удаление папки=Deleting a folder"
+^ArrayDictionary[26] = "Не возможно удаление каталога=The folder cannot be deleted"
+^ArrayDictionary[27] = "Ждите-Загружаются треки=Wait-Tracks are loading"
+^ArrayDictionary[28] = "Подтвердите удаление папки. Нажми 'Ok'=Confirm deleting the folder. Click 'Ok'"
+^ArrayDictionary[29] = "Пустая папка. Добавьте трек.=Empty folder. Add a track."
+^ArrayDictionary[30] = "Не возможно воспроиведение файла=Unable to play the file"
+^ArrayDictionary[31] = "Не возможна загрузка файла: только воспроизведение=File download is not possible: playback only"
+ 
+TextAddMusicTrak.text = Dictionary("Добавить трек")
+TestUrlTrak.text = Dictionary("Следующий тест записи трека с Url")
+UrlTrak.text = Dictionary("Url трека")
+SaveMusicTrak.text = Dictionary("Записать трек")
+
+AudioPlayerImage.File = "QuickPlayer260x260"
