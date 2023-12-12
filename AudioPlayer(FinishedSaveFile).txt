@@ -1,0 +1,49 @@
+// AudioPlayer(FinishedSaveFile).txt
+
+DoModule Slider, When SystemEvent = "TimeNextSecond"
+DoModule SetBegin, When SystemEvent = "FinishedPlaying=TimeNextSecond"
+
+ArrayUrlFile = Components(^UrlFile, "/")
+CountElementsOfArrayUrlFile = CountElementsOfArray(ArrayUrlFile)
+NumberElementOfArray = CountElementsOfArrayUrlFile - 1
+NameAudioFile = ArrayUrlFile[NumberElementOfArray]
+
+NameAudioFile = UrlDecode(NameAudioFile)
+
+Path = GetPathDirectoryDocument()
+NamePathAudioFile = Path + NameAudioFile
+DurationAudioFile = GetDurationAudioFile(NamePathAudioFile)
+
+//Print "FinishedSaveFile: DurationAudioFile = " + DurationAudioFile
+
+if DurationAudioFile == "00:00" 
+{
+    TimeStart.text = ""
+    TimeEnd.text = ""
+    strMessange = Dictionary("Не возможна загрузка файла")
+    strMessange = strMessange + " '" + NameAudioFile + "'"
+    MusicArtist.text = Dictionary("Не возможна загрузка файла: только воспроизведение")
+
+    return
+}
+DoModule EndLoadFileURL, When SystemEvent = "LoadFileURL"
+DoModule ViewWait, StartInterval=200
+
+MusicArtist.text = NameAudioFile
+
+TimeStart.text = "00:00"
+TimeEnd.text = DurationAudioFile
+^TimeEnd = DurationAudioFile
+
+InitSliderPlayer()
+
+^DurationSecondsAudioFile = GetDurationSecondsAudioFile(NamePathAudioFile)
+
+xScale = ScaleOld.X
+^ScaleBeginX = xScale
+
+ScaleNew.X = xScale
+ScaleNew.text = " "
+
+Slider.X = xScale
+Slider.text = " "
