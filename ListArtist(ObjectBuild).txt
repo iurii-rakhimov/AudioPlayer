@@ -1,0 +1,30 @@
+ListArtist	ScaleOld	Label	@	5	552	310	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		vertically		
+ListArtist	ScaleOld	Label	@	5	298	556	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+ListArtist	ScaleNew	Label	@	8	555	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		vertically		
+ListArtist	ScaleNew	Label	@	8	301	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		horizontally		
+ListArtist	Slider	Label	@	5	552	14	14	Slider		255:128:0	2:2:2	7	22	systemFont	center	Label		vertically		
+ListArtist	Slider	Label	@	5	298	14	14	Slider	текст	255:128:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+ListArtist	Rectangle	Label	@	3	113	315	440			2:2:2	2:2:2	0	22	systemFont	center	Label		vertically		
+ListArtist	Rectangle	Label	@	3	95	560	200			2:2:2	2:2:2	0	22	systemFont	center	Label		horizontally		
+ListArtist	Artist	Label	@	0	87	290	25		Исполнители	255:255:255	2:2:2	0	12	systemFont	центр	Label		vertically		
+ListArtist	Artist	Label	@	75	51	420	43		Исполнители	255:255:255	2:2:2	0	22	systemFont	влево	Label		horizontally		
+ListArtist	AddFolderMusicArtist	Image	@	75	20	25	25	AddFolderMusicArtist	242:242:242	242:242:242	0	Add40x40		vertically	
+ListArtist	AddFolderMusicArtist	Image	@	200	20	25	25	AddFolderMusicArtist	242:242:242	242:242:242	0	Add40x40		horizontally	
+ListArtist	AddFolderText	Label	@	100	20	120	25	AddFolderMusicArtist	Добавить новую папку	242:242:242	2:2:2	0	10	systemFont	центр	Label		vertically		
+ListArtist	AddFolderText	Label	@	224	20	120	25	AddFolderMusicArtist	Добавить новую папку	242:242:242	2:2:2	0	10	systemFont	центр	Label		horizontally		
+ListArtist	TextNameNewFolder	TextField	@	70	90	200	20				242:242:242	2:2:2	0	9	systemFont		vertically	vertically		
+ListArtist	TextNameNewFolder	TextField	@	152	67	200	20				242:242:242	2:2:2	0	9	systemFont		horizontally	horizontally		
+ListArtist	NameNewFolder	Label	@	5	86	65	25	NameNewFolder	Имя папки	255:255:255	2:2:2	0	12	systemFont	влево	Label		vertically		
+ListArtist	NameNewFolder	Label	@	5	60	70	30	NameNewFolder	Имя папки	255:255:255	2:2:2	0	12	systemFont	влево	Label		horizontally		
+ListArtist	CreateNewFolder	Label	@	270	61	50	50	CreateNewFolder	ОК	137:137:137	255:255:255	10	19	systemFont	центр	Label		vertically		
+ListArtist	CreateNewFolder	Label	@	498	59	30	30	CreateNewFolder	ОК	137:137:137	255:255:255	10	19	systemFont	центр	Label		horizontally		
+ListArtist	TimeStart	Label	@	50	56	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+ListArtist	TimeStart	Label	@	50	26	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+ListArtist	TimeEnd	Label	@	220	56	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+ListArtist	TimeEnd	Label	@	480	26	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+ListArtist	ContinueMusicArtist	Image	@	147	51	25	25	ContinueMusicArtist	242:242:242	242:242:242	0	Run40x40		vertically	
+ListArtist	ContinueMusicArtist	Image	@	5	51	44	44	ContinueMusicArtist	255:255:255	242:242:242	0	Run40x40		horizontally	
+ListArtist	StopMusicArtist	Image	@	147	51	25	25	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		vertically	
+ListArtist	StopMusicArtist	Image	@	5	51	40	40	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		horizontally	
+ListArtist	ListArtistTable	TableView	@	4	115	313	436	SelectArtist	ListArtist&NameArtist&Label&@&14&0&210&14&NameArtist&NameArtist&255:255:255&2:2:2&0&8&systemFont&влево&Label&&vertically&&#ListArtist&ImageArtist&Image&@&0&1&11&11&SelectArtist&242:242:242&242:242:242&0.0&Help100x100&&vertically&	vertically										
+ListArtist	ListArtistTable	TableView	@	5	97	556	196	SelectArtist	ListArtist&NameArtist&Label&@&14&0&210&14&NameArtist&NameArtist&255:255:255&2:2:2&0&8&systemFont&влево&Label&&horizontally&&#ListArtist&ImageArtist&Image&@&0&1&11&11&SelectArtist&242:242:242&242:242:242&0.0&Help100x100&&horizontally&	horizontally										
