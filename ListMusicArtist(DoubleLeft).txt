@@ -1,0 +1,11 @@
+// ListMusicArtist(DoubleLeft).txt 
+
+indexCell = ^indexCellListMusicArtist - 1
+if indexCell < 0
+{
+	indexCell = CountElementsOfArray(^ArrayFolderPlayMusic) - 1
+}
+^NameMusicArtist = ^ArrayFolderPlayMusic[indexCell]
+^indexCellListMusicArtist = indexCell - 1
+
+DoModule PlayMusicArtist
