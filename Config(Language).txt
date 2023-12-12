@@ -1,0 +1,19 @@
+// AudioPlayer(Language).txt
+language = Language.text
+if language == "🇷🇺"
+{
+	Language.text = "🇺🇸"
+}
+else
+{
+	Language.text = "🇷🇺"
+}
+^Language =Language.text
+DoModule SetLanguage
+
+NameFile = "AudioPlayer(InitStart).txt"
+PathNameFile = ^Path + NameFile
+ContentFile = Language.text
+FileWrite(PathNameFile, ContentFile)
+
+DoModule Appear
