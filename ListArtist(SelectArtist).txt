@@ -1,0 +1,64 @@
+// ListArtist(SelectArtist).txt 
+
+HideObject("AddFolderMusicArtist")
+HideObject("AddFolderText")
+
+^indexCellListMusicArtist = GetIndexSelectCellTableView()
+index = ^indexCellListMusicArtist
+NameMusicArtist = ^ArrayAllMusic[index]
+index = GetIndexStringInString(NameMusicArtist, '.mp3')
+if index > 0
+{
+// файл для прослушивания
+
+	^NameMusicArtist = NameMusicArtist
+
+	ScaleNew.Width = 1
+	ScaleNew.text = ""
+
+	strMessage = Dictionary("Загружается трек-Ждите") + NameMusicArtist
+	Artist.text = strMessage
+	DoForm MusicArtist, wait=100, message=strMessage
+
+	return
+}
+if ^Action == "Move"
+{
+// Копируем в папку
+	strMessage1 = Dictionary("Копируем в папку")
+	strMessage2 = Dictionary("Нажми")
+	Artist.text = strMessage1 + " '" + NameMusicArtist + "' " + strMessage2 + " 🆗"
+	^Folder = NameMusicArtist
+	return
+}
+
+// читаем список файлов в папке
+
+^Folder = NameMusicArtist
+Folder = ^Folder
+
+DelimiterNewLine = IntToChar(10)
+Path = GetPathDirectoryDocument()
+Path = Path + Folder
+^Path = Path
+ListMusicArtist = GetListFilesFolder(Path)
+
+^ArrayFilesFolderMusicArtist = Components(ListMusicArtist, DelimiterNewLine)
+
+^ArrayFolderMusicArtist = CreateArrayContainingSubstring(^ArrayFilesFolderMusicArtist, 'mp3')
+ArrayImageMusicArtist = CreateArrayContainingSubstring(^ArrayFilesFolderMusicArtist, 'jpeg')
+^ArrayFolderMusicArtist = ^ArrayFolderMusicArtist + ArrayImageMusicArtist
+
+CountElementsArrayFolderMusicArtist = CountElementsOfArray(^ArrayFolderMusicArtist)
+if CountElementsArrayFolderMusicArtist == 1
+{
+	strMessage = Dictionary("нет произведений")
+	strMessage = Folder + " - " + strMessage
+	Artist.text = strMessage
+}
+
+Sort(^ArrayFolderMusicArtist, 'MinMax')
+
+strMessage = Dictionary("Ждите-Загружаются треки")
+Artist.text = strMessage
+DoForm ListMusicArtist, wait=100, message=strMessage
