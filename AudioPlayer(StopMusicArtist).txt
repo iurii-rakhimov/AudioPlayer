@@ -1,0 +1,19 @@
+// AudioPlayer(StopMusicArtist).txt 
+
+PlayerStop()
+
+NameModule = "ViewWait"
+StopModule(NameModule)
+
+HideObject("View1")
+HideObject("View2")
+HideObject("View3")
+HideObject("View4")
+HideObject("View5")
+HideObject("View6")
+HideObject("View7")
+HideObject("View8")
+HideObject("View9")
+
+HideObject("StopMusicArtist")
+ContinueMusicArtist.File = "Run40x40"
