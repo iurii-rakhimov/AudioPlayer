@@ -1,0 +1,80 @@
+// AudioPlayer(ViewWait).txt
+
+if ^Count == 0
+{
+	switch ^Color
+	{
+	case 0:
+		^ColorView =  "255:0:0" // "Red" красный
+		break
+	case 1:
+		^ColorView =  "255:128:0" //"Orange" оранжевый
+		break
+	case 2:
+		^ColorView =  "255:255:0" // "Amber" желтый
+		break
+	case 3:
+		^ColorView =  "204:255:0" // светло-зеленый
+		break
+	case 4:
+		^ColorView =  "128:255:0" // зеленый
+		break
+	case 5:
+		^ColorView =  "0:255:255" // голубой
+		break
+	case 6:
+		^ColorView =  "0:128:255" // светло-синий
+		break
+	case 7:
+		^ColorView =  "0:0:255" // синий
+		break
+	case 8:
+		^ColorView =  "230:0:255" // фиолетовый
+		break
+	case 9:
+		^ColorView =  "255:255:255" // белый
+		^Color = -1
+		break
+	default:
+		^Color = 0
+	}
+	^Color++
+}
+
+switch ^Count
+{
+case 0:
+	View1.Color = ^ColorView
+	break
+case 1:
+	View2.Color = ^ColorView
+	break
+case 2:
+	View3.Color = ^ColorView
+	break
+case 3:
+	View4.Color = ^ColorView
+	break
+case 4:
+	View5.Color = ^ColorView
+	break
+case 5:
+	View6.Color = ^ColorView
+	break
+case 6:
+	View7.Color = ^ColorView
+	break
+case 7:
+	View8.Color = ^ColorView
+	break
+case 8:
+	View9.Color = ^ColorView
+	break
+case 9:
+	^Count = -1
+	break
+default:
+	^Count = 0
+}
+
+^Count++
