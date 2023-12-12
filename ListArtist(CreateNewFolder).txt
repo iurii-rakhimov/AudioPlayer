@@ -1,0 +1,9 @@
+// ListArtist(CreateNewFolder).txt
+
+NameNewFolder.text = "CreateNew"
+
+Folder = TextNameNewFolder.text
+kv=CreateDirectory(Folder)
+
+DoModule Main
+DoModule Appear
