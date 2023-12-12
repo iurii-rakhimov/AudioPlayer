@@ -1,0 +1,48 @@
+// AudioPlayer(EndLoadFileURL).txt
+
+NameModule = "ViewWait"
+StopModule(NameModule)
+
+HideObject("View1")
+HideObject("View2")
+HideObject("View3")
+HideObject("View4")
+HideObject("View5")
+HideObject("View6")
+HideObject("View7")
+HideObject("View8")
+HideObject("View9")
+HideObject("Message")
+
+ShowObject("AudioPlayerMini")
+
+ArrayUrlFile = Components(^UrlFile, "/")
+CountElementsOfArrayUrlFile = CountElementsOfArray(ArrayUrlFile)
+NumberElementOfArray = CountElementsOfArrayUrlFile - 1
+NameAudioFile = ArrayUrlFile[NumberElementOfArray]
+lengthImageFile = GetContainingImageAudioFileAndSave(NameAudioFile)
+
+//Print "EndLoadFileURL: NameAudioFile = " + NameAudioFile
+//Print "EndLoadFileURL: lengthImageFile = " + lengthImageFile
+
+if lengthImageFile != 0
+{
+	l = LengthString(NameAudioFile)
+	indexStart = l - 4
+	indexEnd = l - 1
+	typeFile = SubString(NameAudioFile, indexStart, indexEnd)
+	if typeFile == ".mp3"
+	{
+		nameImage = SubString(NameAudioFile, 0, indexStart)
+//		Print "nameImage = " + nameImage
+		if lengthImageFile > 0
+		{
+			AudioPlayerImage.File = nameImage + "jpeg"
+		}
+	}
+}
+else
+{
+	AudioPlayerImage.File = "Notes1200x1200"
+}
+//Print "EndLoadFileURL lengthImageFile = " + lengthImageFile
