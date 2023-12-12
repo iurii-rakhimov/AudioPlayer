@@ -1,0 +1,10 @@
+// AudioPlayer(Test2).txt
+
+nameFormScreen = "AudioPlayer"
+nameModule = "Notes100x100"
+ContentFile = GetTextModule(nameFormScreen, nameModule)
+ConvertStringToBufferBinaryMemory(ContentFile)
+
+Path = GetPathDirectoryDocument()
+PathNameFile = Path + "Tmp.jpeg"
+FileWriteBinaryFromBufferMemory(PathNameFile)
