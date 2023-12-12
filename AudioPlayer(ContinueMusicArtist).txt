@@ -1,0 +1,6 @@
+// AudioPlayer(ContinueMusicArtist).txt 
+
+PlayerContinue()
+
+HideObject("ContinueMusicArtist")
+StopMusicArtist.File = "RunStop40x40"
