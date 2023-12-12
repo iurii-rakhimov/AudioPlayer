@@ -25,7 +25,6 @@ LoadModule  Function[Dictionary].txt
 LoadModule  Function[Scale].txt
 LoadModule  Function[SetBegin].txt
 LoadModule  Function[TimeView].txt
-LoadModule  Function[Summa].txt
 
 NameFile = "AudioPlayer(InitStart).txt"
 PathNameFile = ^Path + NameFile
