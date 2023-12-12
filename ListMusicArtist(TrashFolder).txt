@@ -1,0 +1,15 @@
+// ListMusicArtist(TrashFolder).txt 
+
+Path = GetPathDirectoryDocument()
+PathFolder = Path + ^Folder
+kv = RemoveDirectory(PathFolder)
+if kv != 0
+{
+	MusicArtist.text = Dictionary("не возможно удаление каталога")
+	return
+}
+
+^FlagAudioPlayer = "Exit"
+
+ExitForm
+
