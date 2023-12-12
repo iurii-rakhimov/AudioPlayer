@@ -1,0 +1,24 @@
+// ListArtist(Main).txt
+
+DelimiterNewLine = IntToChar(10)
+Path = GetPathDirectoryDocument()
+ListArtist = GetListFilesFolder(Path)
+
+// собираем и сортируем папки
+
+^ArrayFileFolder = Components(ListArtist, DelimiterNewLine)
+^ArrayFolderArtist = CreateArrayForSelectedComponentStructArray(^ArrayFileFolder, '', '.', 1)
+Sort(^ArrayFolderArtist, 'MinMax')
+
+// собираем сортируем треки в главной папке
+
+^ArrayMusicArtist = CreateArrayContainingSubstring(^ArrayFileFolder, 'mp3')
+^ArrayMusicImage = CreateArrayContainingSubstring(^ArrayFileFolder, 'jpeg')
+^ArrayArtistAndImage = ^ArrayMusicArtist + ^ArrayMusicImage
+Sort(^ArrayMusicArtist, 'MinMax')
+Sort(^ArrayArtistAndImage, 'MinMax')
+
+^Action = ""
+AddFolderText.text = Dictionary("Добавить новую папку")
+NameNewFolder.text = Dictionary("Имя папки")
+Artist.text = Dictionary("Исполнители")
