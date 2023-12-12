@@ -1,0 +1,99 @@
+// ListMusicArtist(Appear).txt
+
+Remove modelCellVertically
+Remove modelCellHorizontally
+
+ShowObject("ContinueMusicArtist")
+
+HideObject("StopMusicArtist")
+HideObject("TimeStart")
+HideObject("TimeEnd")
+HideObject("RapeatMusicArtist")
+
+HideObject("CopyMusicArtist")
+HideObject("TrashMusicArtist")
+HideObject("PasteMusicArtist")
+
+HideObject("DoubleRight")
+HideObject("DoubleLeft")
+
+HideObject("TrashFolder")
+HideObject("TrashFolderText")
+HideObject("TrashFolderOk")
+
+Folder = ^Folder
+Folder.text = Folder
+if ^FlagAudioPlayer == "Copy"
+{
+	ShowObject("PasteMusicArtist")
+
+	HideObject("Folder")
+	HideObject("Image")
+	HideObject("ImageMini")
+	HideObject("ContinueMusicArtist")
+	HideObject("ListMusicArtist")
+	HideObject("Rectangle")
+	HideObject("ScaleOld")
+	HideObject("ScaleNew")
+	HideObject("Slider")
+
+	MusicArtist.text = Dictionary("Нажмите кнопку 'Paste'")
+	^FlagAudioPlayer = ""
+
+	return
+}
+
+CountElementsArrayFolderMusicArtist = CountElementsOfArray(^ArrayFolderMusicArtist)
+if CountElementsArrayFolderMusicArtist == 0
+{
+	HideObject("ContinueMusicArtist")
+	HideObject("RapeatMusicArtist")
+	HideObject("Image")
+	HideObject("ImageMini")
+	HideObject("ListMusicArtist")
+	HideObject("Rectangle")
+	HideObject("ScaleOld")
+	HideObject("ScaleNew")
+	HideObject("Slider")
+
+	HideObject("Folder")
+	ShowObject("TrashFolder")
+	ShowObject("TrashFolderText")
+	strMessanger = Dictionary("Пустая папка")
+	strMessanger = strMessanger + " '" + Folder + " '"
+	MusicArtist.text = strMessanger
+
+	return
+}
+
+Struct TableKontragent { ImageArtist, NameArtist } 
+
+j = 0
+Image = "Notes40x40"
+For i = 0 ; i < CountElementsArrayFolderMusicArtist ;  i++
+{
+	NameMusicArtist = ^ArrayFolderMusicArtist[i]
+	l = LengthString(NameMusicArtist)
+	indexStart = l - 4
+	indexEnd = l - 1
+	typeFile = SubString(NameMusicArtist, indexStart, indexEnd)
+	if typeFile == ".mp3"
+	{
+		TableKontragent.ImageArtist = Image
+		TableKontragent.NameArtist = NameMusicArtist
+		Image = "Notes40x40"
+	}
+	else
+	{
+		NameImageFile = ^Folder + "/" + NameMusicArtist
+		Image = NameImageFile
+		continue
+	}
+	ListMusicArtistTable[j] = TableKontragent
+	^ArrayFolderPlayMusic[j] = NameMusicArtist
+	j++
+}
+
+^indexCellListMusicArtist = -1
+
+DoModule PlayMusicArtist
