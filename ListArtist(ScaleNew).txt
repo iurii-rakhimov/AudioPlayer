@@ -1,0 +1,3 @@
+// ListArtist(ScaleNew).txt
+
+Scale()
