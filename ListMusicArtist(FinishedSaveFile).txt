@@ -1,0 +1,25 @@
+// ListMusicArtist(FinishedSaveFile).txt
+
+index = ^indexCellListMusicArtist
+
+NameMusicArtist = ^ArrayFolderPlayMusic[index]
+NameMusicArtist = ReplacingString(NameMusicArtist, '.mp3', '')
+
+NameImageFile = NameMusicArtist + ".jpeg"
+NameImageFile = ^Folder + "/" + NameImageFile
+
+//print "NameImageFile=" + NameImageFile
+
+//statusObject = GetStatusObject("Image")
+
+Image.File = NameImageFile
+ImageMini.File = NameImageFile
+
+if ^FlagView == "Image"
+{
+	DoModule Image
+}
+else
+{
+	DoModule ImageMini
+}
