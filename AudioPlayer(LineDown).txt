@@ -1,0 +1,16 @@
+// AudioPlayer(LineDown).txt
+if ^Test == 3
+{
+	IndexObject = GetIndexObject("SystemStart", "System.Bar.Config") 
+	ShowObjectForIndex(IndexObject)
+	^Test = 0
+	HideObject("TimeStart")
+	HideObject("TimeEnd")
+	ShowObject("Test1")
+	ShowObject("Test2")
+}
+else
+{
+	TimeEnd.text = "00:0" + ^Test
+	^Test++
+}
