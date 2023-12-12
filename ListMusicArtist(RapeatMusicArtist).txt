@@ -1,0 +1,6 @@
+// ListMusicArtist(RapeatMusicArtist).txt 
+
+PlayerRepeat()
+
+ShowObject("StopMusicArtist")
+HideObject("PlayMusicArtist")
