@@ -1,0 +1,19 @@
+function Dictionary(wordRu)
+{
+	if ^Language == "🇷🇺"
+	{
+		return wordRu
+	}
+
+	index = GetIndexArrayContainingText(^ArrayDictionary, wordRu)
+	if index < 0
+	{
+		return ""
+	}
+	strArrayDictionary = ^ArrayDictionary[index]
+	indexString = GetFirstIndexCharInString(strArrayDictionary, '=')
+	indexString++
+	lengthString = LengthString(strArrayDictionary)
+	wordEn = SubString(strArrayDictionary, indexString, lengthString)
+	return wordEn
+}
