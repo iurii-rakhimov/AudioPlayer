@@ -1,0 +1,18 @@
+// ListMusicArtist(SelectMusicArtist).txt 
+
+HideObject("ContinueMusicArtist")
+ShowObject("StopMusicArtist")
+
+ShowObject("CopyMusicArtist")
+ShowObject("TrashMusicArtist")
+ShowObject("PasteMusicArtist")
+
+HideObject("Folder")
+HideObject("TrashFolder")
+HideObject("TrashFolderText")
+
+indexCell = GetIndexSelectCellTableView()
+^NameMusicArtist = ^ArrayFolderPlayMusic[indexCell]
+^indexCellListMusicArtist = indexCell - 1
+
+DoModule PlayMusicArtist
