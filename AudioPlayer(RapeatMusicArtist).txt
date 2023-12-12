@@ -1,0 +1,6 @@
+// AudioPlayer(RapeatMusicArtist).txt 
+
+PlayerRepeat()
+
+ShowObject("StopMusicArtist")
+HideObject("PlayMusicArtist")
