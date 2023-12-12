@@ -1,0 +1,10 @@
+// ListArtist(AddFolderMusicArtist).txt 
+
+HideObject("Artist")
+HideObject("AddFolderMusicArtist")
+HideObject("AddFolderText")
+
+ShowObject("NameNewFolder")
+ShowObject("TextNameNewFolder")
+ShowObject("CreateNewFolder")
+
