@@ -1,0 +1,109 @@
+// AudioPlayer(SaveMusicTrak).txt 
+
+UrlFile = UrlText.text
+if UrlFile == ""
+{
+	return
+}
+^UrlFile = UrlFile
+
+yDown = LineDown.Y
+heightImage = AudioPlayerImage.Height
+heightSlider = Slider.Height
+yImage = yDown - heightImage - heightSlider
+AudioPlayerImage.Y = yImage
+AudioPlayerImage.File = "Notes1200x1200"
+
+ShowObject("TimeStart")
+ShowObject("TimeEnd")
+ShowObject("MusicArtist")
+ShowObject("PlayerSlider")
+
+HideObject("Title")
+HideObject("AddMusicTrak")
+HideObject("UrlTrak")
+HideObject("UrlText")
+HideObject("SaveMusicTrak")
+HideObject("CleaUrl")
+
+ColorView =  "255:255:255" // белый
+View1.Color = ColorView
+View2.Color = ColorView
+View3.Color = ColorView
+View4.Color = ColorView
+View5.Color = ColorView
+View6.Color = ColorView
+View7.Color = ColorView
+View8.Color = ColorView
+View9.Color = ColorView
+
+ArrayUrlFile = Components(^UrlFile, "/")
+CountElementsOfArrayUrlFile = CountElementsOfArray(ArrayUrlFile)
+NumberElementOfArray = CountElementsOfArrayUrlFile - 1
+NameAudioFile = ArrayUrlFile[NumberElementOfArray]
+
+NameAudioFile = UrlDecode(NameAudioFile)
+MusicArtist.text = NameAudioFile
+
+Path = GetPathDirectoryDocument()
+NamePathAudioFile = Path + NameAudioFile
+sizeAudioFile = FileSize(NamePathAudioFile)
+if sizeAudioFile != 0
+{
+	TimeStart.text = ""
+	TimeEnd.text = ""
+	Message.text = "Трек был уже ранее записан"
+	return
+}
+
+HideObject("SaveMusicTrak")
+HideObject("ContinueMusicArtist")
+ShowObject("StopMusicArtist")
+ShowObject("RapeatMusicArtist")
+
+ShowObject("ScaleOld")
+ShowObject("ScaleNew")
+ShowObject("Slider")
+
+DoModule FinishedSaveFile, When SystemEvent = "FinishedSaveFile"
+
+UrlFile = ^UrlFile
+
+PlayAudioFile UrlFile
+
+Path = GetPathDirectoryDocument()
+NamePathAudioFile = Path + NameAudioFile
+DurationAudioFile = GetDurationAudioFile(NamePathAudioFile)
+
+//Print "SaveMusicTrak: DurationAudioFile = " + DurationAudioFile
+
+if DurationAudioFile == 0
+{
+	TimeStart.text = ""
+	TimeEnd.text = ""
+	Message.text = Dictionary("Загружается трек-Ждите")
+	HideObject("SaveMusicTrak")
+
+	return
+}
+TimeStart.text = "00:00"
+TimeEnd.text = DurationAudioFile
+^TimeEnd = DurationAudioFile
+
+InitSliderPlayer()
+
+^DurationSecondsAudioFile = GetDurationSecondsAudioFile(NamePathAudioFile)
+
+xScale = ScaleOld.X
+^ScaleBeginX = xScale
+
+ScaleNew.X = xScale
+ScaleNew.text = " "
+
+Slider.X = xScale
+Slider.text = " "
+
+//DoModuleWhen PlayerSlider, SystemEvent="TimeNextSecond"
+DoModule Slider, When SystemEvent = "TimeNextSecond"
+DoModule SetBegin, When SystemEvent = "FinishedPlaying=TimeNextSecond"
+
