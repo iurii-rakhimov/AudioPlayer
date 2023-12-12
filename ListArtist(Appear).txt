@@ -1,0 +1,82 @@
+// ListArtist(Appear).txt 
+
+if ^FlagAudioPlayer == "Exit"
+{
+    ExitForm
+}
+
+Remove modelCellVertically
+Remove modelCellHorizontally
+
+HideObject("NameNewFolder")
+HideObject("TextNameNewFolder")
+HideObject("CreateNewFolder")
+HideObject("TimeStart")
+HideObject("TimeEnd")
+HideObject("StopMusicArtist")
+HideObject("ContinueMusicArtist")
+
+ShowObject("AddFolderMusicArtist")
+ShowObject("AddFolderText")
+
+HideObject("ScaleOld")
+HideObject("Slider")
+HideObject("ScaleNew")
+
+Struct TableKontragent { ImageArtist, NameArtist } 
+
+CountRecords = CountElementsOfArray(^ArrayArtistAndImage)
+j = 0
+^ArrayAllMusic[j] = ""
+Image = "Notes40x40"
+
+// собираем треки
+
+For i = 0 ; i < CountRecords ;  i++
+{
+    NameMusicArtist = ^ArrayArtistAndImage[i]
+    l = LengthString(NameMusicArtist)
+    indexStart = l - 4
+    indexEnd = l - 1
+    typeFile = SubString(NameMusicArtist, indexStart, indexEnd)
+    if typeFile == ".mp3"
+    {
+        TableKontragent.ImageArtist = Image
+        TableKontragent.NameArtist = NameMusicArtist
+        Image = "Notes40x40"
+    }
+    else
+    {
+        Image = NameMusicArtist
+        continue
+    }
+    ListArtistTable[j] = TableKontragent
+    ^ArrayAllMusic[j] = NameMusicArtist
+    j++
+}
+
+// собираем папки
+
+^ArrayFolderMusicArtist = ^ArrayAllMusic
+CountRecords = CountElementsOfArray(^ArrayFolderArtist)
+For i = 0 ; i < CountRecords ;  i++
+{
+    NameArtist = ^ArrayFolderArtist[i]
+    TableKontragent.ImageArtist = "Folder40x40"
+    TableKontragent.NameArtist = NameArtist
+    ListArtistTable[j] = TableKontragent
+    ^ArrayAllMusic[j] = NameArtist
+    j++
+}
+
+// проверка наличия треков или папок
+
+if j == 0
+{
+    Artist.text = Dictionary("Пустая папка. Добавьте трек.")
+    HideObject("ListArtistTable")
+    HideObject("Rectangle")
+    HideObject("AddFolderMusicArtist")
+    HideObject("AddFolderText")
+    return
+}
