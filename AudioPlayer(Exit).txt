@@ -1,0 +1,7 @@
+// AudioPlayer(Exit).txt
+
+IndexObject = GetIndexObject("SystemStart", "System.Bar.Config")
+ShowObjectForIndex(IndexObject)
+
+SetMainDirectory("")
+SetMainForm("SystemFormStart")
