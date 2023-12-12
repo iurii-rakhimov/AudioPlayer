@@ -1,0 +1,86 @@
+// ListMusicArtist(PlayMusicArtist).txt
+
+index = ^indexCellListMusicArtist
+index++
+countMusicArtist = CountElementsOfArray(^ArrayFolderPlayMusic)
+if index >= countMusicArtist
+{
+	index = 0
+}
+^indexCellListMusicArtist = index
+Folder = ^Folder
+
+NameMusicArtist = ^ArrayFolderPlayMusic[index]
+NameMusicArtist = ReplacingString(NameMusicArtist, '.mp3', '')
+
+NameImageFile = NameMusicArtist + ".jpeg"
+indexArray = GetIndexArrayContainingText(^ArrayFolderMusicArtist, NameImageFile)
+if indexArray == -1
+{
+	NameImageFile = "Notes1200x1200"
+}
+else
+{
+	NameImageFile = ^Folder + "/" + NameImageFile
+}
+
+//print "NameImageFile=" + NameImageFile
+
+Image.File = NameImageFile
+ImageMini.File = NameImageFile
+NameMusicArtist = TrimString(NameMusicArtist, ' ')
+
+MusicArtist.text = NameMusicArtist
+
+HideObject("TrashFolder")
+HideObject("TrashFolderText")
+
+HideObject("ContinueMusicArtist")
+ShowObject("StopMusicArtist")
+ShowObject("RapeatMusicArtist")
+
+Path = GetPathDirectoryDocument()
+NameAudioFile = ^ArrayFolderPlayMusic[index]
+Folder = ^Folder
+NamePathAudioFile = Path  + Folder + "/" + NameAudioFile
+DurationAudioFile = GetDurationAudioFile(NamePathAudioFile)
+^DurationSecondsAudioFile = DurationAudioFile
+TimeStart.text = "00.00"
+TimeEnd.text = DurationAudioFile
+^TimeEnd = DurationAudioFile
+
+PlayAudioFile NamePathAudioFile
+^ErrorAudioPlayer = GetSystemReturn()
+if ^ErrorAudioPlayer != ""
+{
+	MusicArtist.text = Dictionary("Читать файл не возможно")
+	return
+}
+
+InitSliderPlayer()
+
+^DurationSecondsAudioFile = GetDurationSecondsAudioFile(NamePathAudioFile)
+
+scaleOldBeginX = ScaleOld.X
+
+ScaleNew.X = scaleOldBeginX
+ScaleNew.text = ""
+
+Slider.X = scaleOldBeginX
+Slider.text = ""
+// запустим если есть картинка в файле .mp3
+DoModule FinishedSaveFile, When SystemEvent = "FinishedSaveFile"
+//
+DoModuleWhen Slider, SystemEvent = "TimeNextSecond"
+//DoModule Slider, When SystemEvent = "TimeNextSecond"
+DoModuleWhen PlayMusicArtist, SystemEvent = "FinishedPlaying=" + NamePathAudioFile
+//DoModule PlayMusicArtist, When SystemEvent = "FinishedPlaying=" + NamePathAudioFile
+
+if ^FlagView == "Image"
+{
+	DoModule Image
+}
+else
+{
+	DoModule ImageMini
+}
