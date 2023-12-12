@@ -1,0 +1,21 @@
+// ListMusicArtist(PasteMusicArtist).txt
+
+NameFile = ^NameMusicArtist
+Path = GetPathDirectoryDocument()
+Path = Path + ^Folder + "/"
+PathNameFile = Path + NameFile
+kv = FileWriteBinaryFromBufferMemory(PathNameFile)
+if kv != 0
+{
+	MusicArtist.text = Dictionary("Ошибка записи файла")
+	return
+}
+
+^Action = ""
+HideObject("ImageMini")
+
+MusicArtist.text = Dictionary("Скопировали. Проверь копию и удали ненужное.")
+
+HideObject("PasteMusicArtist")
+
+
