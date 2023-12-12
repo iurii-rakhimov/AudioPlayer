@@ -1,0 +1,51 @@
+function TimeView()
+{
+	status = GetStatusPlayer()
+	if status == "1"
+	{
+		return
+	}
+	SecondAudioPlayer = GetSecondAudioPlayer()
+	SecondAudioPlayer = OnlyWhole(SecondAudioPlayer)
+	TimeMinutes = SecondAudioPlayer / 60
+	TimeMinutes = OnlyWhole(TimeMinutes)
+	TimeMinutes = AddCharBeginString(TimeMinutes, '0', 2)
+	TimeSeconds = SecondAudioPlayer % 60
+	TimeSeconds = OnlyWhole(TimeSeconds)
+	TimeSeconds = AddCharBeginString(TimeSeconds, '0', 2)
+
+	TimeCurrent = TimeMinutes + ":" + TimeSeconds
+	if TimeCurrent >= ^TimeEnd
+	{
+		return
+	}
+
+	TimeStart.text = TimeCurrent
+	scaleOldWidth = ScaleOld.Width
+	scaleOldBeginX = ScaleOld.X
+	sliderWidth = Slider.Width
+	maxScaleWidth = scaleOldWidth - sliderWidth
+
+	if SecondAudioPlayer > 0
+	{
+		newScaleWidth = scaleOldWidth * SecondAudioPlayer / ^DurationSecondsAudioFile
+		newScaleWidth = OnlyWhole(newScaleWidth)
+	}
+	else
+	{
+		newScaleWidth = 0
+	}
+	if newScaleWidth > maxScaleWidth
+	{
+		return
+	}
+	Slider.x = scaleOldBeginX + newScaleWidth
+	Slider.text = ""
+
+	w = newScaleWidth
+
+	ScaleNew.Width = w
+	ScaleNew.text = ""
+
+	return
+}
