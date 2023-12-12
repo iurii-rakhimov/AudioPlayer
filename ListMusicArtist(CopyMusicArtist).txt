@@ -1,0 +1,15 @@
+// ListMusicArtist(CopyMusicArtist).txt
+
+indexCell = ^indexCellListMusicArtist
+NameMusicArtist = ^ArrayFolderPlayMusic[indexCell]
+Path = GetPathDirectoryDocument()
+Path = Path + ^Folder + "/"
+PathNameFile = Path + NameMusicArtist
+lenFile = FileReadBinaryBufferMemory(PathNameFile)
+if lenFile == 0
+{
+	MusicArtist.text = Dictionary("Файл отсутствует")
+	return
+}
+MusicArtist.text = Dictionary("Файл скопирован в буфер. Выбери папку для переноса трека.")
+^FlagAudioPlayer = "Copy"
