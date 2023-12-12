@@ -1,0 +1,44 @@
+// AudioPlayer(Main).txt 
+
+SetMainDirectory("AudioPlayer")
+
+Remove ExternalVariables
+
+indexObject = GetIndexObject("SystemStart", "System.Bar.Config")
+HideObjectForIndex(indexObject)
+
+^ErrorAudioPlayer = ""
+^FlagAudioPlayer = ""
+^Count = 0
+^Color = 0
+^ColorView =  "255:255:255" // белый
+^Test = 0
+^Path = GetPathDirectoryDocument()
+Path = ^Path
+ArrayPath = Components(Path, "/")
+CountElementsArrayPath = CountElementsOfArray(ArrayPath)
+NumerFolder = CountElementsArrayPath - 2
+
+^Folder = ArrayPath[NumerFolder]
+
+LoadModule  Function[Dictionary].txt
+LoadModule  Function[Scale].txt
+LoadModule  Function[SetBegin].txt
+LoadModule  Function[TimeView].txt
+LoadModule  Function[Summa].txt
+
+NameFile = "AudioPlayer(InitStart).txt"
+PathNameFile = ^Path + NameFile
+lenFile = FileSize(PathNameFile)
+if lenFile == 0
+{
+    ContentFile = "🇺🇸"
+    kv = FileWrite(PathNameFile, ContentFile)
+}
+else
+{
+    ContentFile = FileRead(PathNameFile)
+}
+Language.text = ContentFile
+^Language = Language.text
+DoModule SetLanguage
