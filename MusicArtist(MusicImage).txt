@@ -1,0 +1,27 @@
+// MusicArtist(MusicImage).txt
+
+if ^FlagAudioPlayer != ""
+{
+	return
+}
+if ^ErrorAudioPlayer != ""
+{
+	HideObject("ContinueMusicArtist")
+	HideObject("RapeatMusicArtist")
+	HideObject("StopMusicArtist")
+	HideObject("TimeStart")
+	HideObject("TimeEnd")
+	ShowObject("TrashMusicArtist")
+	ShowObject("TrashText")
+
+	return
+}
+statusObject = GetStatusObject("StopMusicArtist")
+if statusObject == 'true'
+{
+	DoModule StopMusicArtist
+}
+else
+{
+	DoModule ContinueMusicArtist
+}
