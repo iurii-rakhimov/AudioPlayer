@@ -1,0 +1,6 @@
+// MusicArtist(RenameViewMusicArtist).txt 
+
+ShowObject("RenameNameNew")
+ShowObject("RenameTextName")
+ShowObject("RenameMusicArtist")
+RenameTextName.text = ^NameMusicArtist
