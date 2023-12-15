@@ -1,0 +1,11 @@
+// MusicArtist(ViewError).txt
+
+	HideObject("ContinueMusicArtist")
+	HideObject("RapeatMusicArtist")
+	HideObject("StopMusicArtist")
+	HideObject("TimeStart")
+	HideObject("TimeEnd")
+	ShowObject("TrashMusicArtist")
+	ShowObject("TrashText")
+
+	return
