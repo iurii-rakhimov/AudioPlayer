@@ -1,0 +1,19 @@
+// MusicArtist(FinishedSaveFile).txt 
+
+index = ^indexCellListMusicArtist
+
+NameMusicArtist = ^ArrayAllMusic[index]
+NameMusicArtist = ReplacingString(NameMusicArtist, '.mp3', '')
+NameImageFile = NameMusicArtist + '.jpeg'
+NameMusicArtist = TrimString(NameMusicArtist, ' ')
+
+MusicArtist.text = NameMusicArtist
+
+Path = GetPathDirectoryDocument()
+NamePathImageFile = Path + NameImageFile
+sizeImageFile = FileSize(NamePathImageFile)
+if sizeImageFile == 0
+{
+	NameImageFile = "Notes1200x1200"
+}
+MusicImage.File = NameImageFile
