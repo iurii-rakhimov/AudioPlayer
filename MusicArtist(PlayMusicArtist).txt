@@ -1,0 +1,90 @@
+// MusicArtist(PlayMusicArtist).txt
+
+index = ^indexCellListMusicArtist
+
+NameMusicArtist = ^ArrayAllMusic[index]
+NameMusicArtist = ReplacingString(NameMusicArtist, '.mp3', '')
+NameImageFile = NameMusicArtist + '.jpeg'
+NameMusicArtist = TrimString(NameMusicArtist, ' ')
+
+MusicArtist.text = NameMusicArtist
+
+Path = GetPathDirectoryDocument()
+NamePathImageFile = Path + NameImageFile
+sizeImageFile = FileSize(NamePathImageFile)
+if sizeImageFile == 0
+{
+	NameImageFile = "Notes1200x1200"
+}
+MusicImage.File = NameImageFile
+
+HideObject("TimeStart")
+HideObject("TimeEnd")
+HideObject("ScaleNew")
+HideObject("ScaleOld")
+HideObject("Slider")
+HideObject("StopMusicArtist")
+HideObject("RapeatMusicArtist")
+HideObject("ContinueMusicArtist")
+
+NameAudioFile = ^ArrayAllMusic[index]
+NamePathAudioFile = Path + NameAudioFile
+DurationAudioFile = GetDurationAudioFile(NamePathAudioFile)
+^DurationSecondsAudioFile = DurationAudioFile
+
+PlayAudioFile NamePathAudioFile
+^ErrorAudioPlayer = GetSystemReturn()
+if ^ErrorAudioPlayer != ""
+{
+	MusicArtist.text = Dictionary("Читать файл не возможно")
+	return
+}
+
+DoModule FinishedSaveFile, When SystemEvent = "FinishedSaveFile"
+
+TimeStart.text = "00.00"
+TimeEnd.text = DurationAudioFile
+^TimeEnd = DurationAudioFile
+ShowObject("ScaleNew")
+ShowObject("ScaleOld")
+ShowObject("Slider")
+ShowObject("StopMusicArtist")
+ShowObject("RapeatMusicArtist")
+
+HideObject("TrashMusicArtist")
+HideObject("TrashText")
+
+InitSliderPlayer()
+
+^DurationSecondsAudioFile = GetDurationSecondsAudioFile(NamePathAudioFile)
+DurationSeconds = OnlyWhole(^DurationSecondsAudioFile)
+if DurationSeconds == 0
+{
+	MusicArtist.text = Dictionary("Не возможно воспроиведение файла")
+
+	ShowObject("TrashMusicArtist")
+	ShowObject("TrashText")
+
+	HideObject("RenameImage")
+	HideObject("RenameText")
+	HideObject("CopyMusicArtist")
+	HideObject("CopyText")
+
+	HideObject("TimeStart")
+	HideObject("TimeEnd")
+
+	return
+}
+
+scaleOldBeginX = ScaleOld.X
+
+ScaleNew.X = scaleOldBeginX
+ScaleNew.text = ""
+
+Slider.X = scaleOldBeginX
+Slider.text = ""
+
+DoModuleWhen Slider, SystemEvent = "TimeNextSecond"
+//DoModule Slider, When SystemEvent = "TimeNextSecond"
+DoModuleWhen FinishPlay, SystemEvent = "FinishedPlaying=" + NamePathAudioFile
+//DoModule PlayMusicArtist, When SystemEvent = "FinishedPlaying=" + NamePathAudioFile
