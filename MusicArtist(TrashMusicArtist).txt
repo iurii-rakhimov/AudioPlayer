@@ -1,0 +1,22 @@
+// MusicArtist(TrashMusicArtist).txt
+
+NameFile = ^NameMusicArtist
+Path = GetPathDirectoryDocument()
+PathNameFile = Path + NameFile
+kv = RemoveFile(PathNameFile)
+if kv != 0
+{
+	MusicArtist.text = Dictionary("не возможно удаление файла")
+	return
+}
+// удалим Image file
+l = LengthString(NameFile)
+indexStart = l - 5
+nameImage = SubString(NameFile, 0, indexStart)
+nameImage = nameImage + ".jpeg"
+PathNameFile = Path + nameImage
+RemoveFile(PathNameFile)
+
+// Удалили
+^FlagAudioPlayer = "Exit"
+ExitForm
