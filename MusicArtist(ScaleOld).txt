@@ -1,0 +1,3 @@
+// MusicArtist(ScaleOld).txt
+
+Scale()
