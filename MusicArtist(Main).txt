@@ -1,0 +1,7 @@
+// MusicArtist(Main).txt
+
+CopyText.text = Dictionary("Копировать")
+TrashText.text = Dictionary("Удалить")
+RenameText.text = Dictionary("Переименовать")
+
+DoModule PlayMusicArtist
