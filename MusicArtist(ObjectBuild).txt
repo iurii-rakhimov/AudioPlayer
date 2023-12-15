@@ -1,0 +1,37 @@
+MusicArtist	MusicImage	Image	@	10	210	300	300	MusicImage	255:255:255	242:242:242	0	Notes1200x1200		vertically	
+MusicArtist	MusicImage	Image	@	189	105	190	190		255:255:255	242:242:242	0	QuickPlayer260x260		horizontally	
+MusicArtist	TimeStart	Label	@	29	26	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+MusicArtist	TimeStart	Label	@	50	26	50	20	TimeStart	TimeStart	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+MusicArtist	TimeEnd	Label	@	220	26	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		vertically		
+MusicArtist	TimeEnd	Label	@	480	26	50	20	TimeEnd	TimeEnd	242:242:242	2:2:2	0	18	systemFont	center	Label		horizontally		
+MusicArtist	RapeatMusicArtist	Image	@	265	55	50	50	RapeatMusicArtist	255:255:255	242:242:242	0	Repeat100x100		vertically	
+MusicArtist	RapeatMusicArtist	Image	@	510	55	50	50	RapeatMusicArtist	255:255:255	242:242:242	0	Repeat100x100		horizontally	
+MusicArtist	ContinueMusicArtist	Image	@	5	55	50	50	ContinueMusicArtist	255:255:255	242:242:242	0	Run40x40		vertically	
+MusicArtist	ContinueMusicArtist	Image	@	5	55	50	50	ContinueMusicArtist	255:255:255	242:242:242	0	Run40x40		horizontally	
+MusicArtist	StopMusicArtist	Image	@	5	55	50	50	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		vertically	
+MusicArtist	StopMusicArtist	Image	@	10	55	50	50	StopMusicArtist	255:255:255	242:242:242	0	RunStop40x40		horizontally	
+MusicArtist	ScaleOld	Label	@	5	540	310	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		vertically		
+MusicArtist	ScaleOld	Label	@	4	298	560	14	ScaleOld		128:255:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+MusicArtist	Slider	Label	@	5	540	14	14	Slider	текст	255:128:0	2:2:2	7	22	systemFont	center	Label		vertically		
+MusicArtist	Slider	Label	@	5	298	14	14	Slider	текст	255:128:0	2:2:2	7	22	systemFont	center	Label		horizontally		
+MusicArtist	ScaleNew	Label	@	8	543	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		vertically		
+MusicArtist	ScaleNew	Label	@	8	301	8	8	ScaleNew		255:255:0	2:2:2	4	8	systemFont	center	Label		horizontally		
+MusicArtist	MusicArtist	Label	@	65	55	190	100	MusicImage	MusicArtist	255:255:255	2:2:2	0	14	systemFont	center	Label		vertically		
+MusicArtist	MusicArtist	Label	@	70	55	440	50		MusicArtist	255:255:255	2:2:2	0	15	systemFont	center	Label		horizontally		
+MusicArtist	TrashMusicArtist	Image	@	111	25	25	25	TrashMusicArtist	242:242:242	242:242:242	0	Trash40x40		vertically	
+MusicArtist	TrashMusicArtist	Image	@	111	25	25	25	TrashMusicArtist	242:242:242	242:242:242	0	Trash40x40		horizontally	
+MusicArtist	TrashText	Label	@	137	25	45	25	TrashMusicArtist	Удалить	242:242:242	2:2:2	0	10	systemFont	влево	Label		vertically		
+MusicArtist	TrashText	Label	@	137	25	45	25	TrashMusicArtist	Удалить	242:242:242	2:2:2	0	10	systemFont	влево	Label		horizontally		
+MusicArtist	CopyMusicArtist	Image	@	20	25	25	25	CopyMusicArtist	242:242:242	242:242:242	0	MoveToFolder		vertically	
+MusicArtist	CopyMusicArtist	Image	@	20	25	25	25	CopyMusicArtist	242:242:242	242:242:242	0	MoveToFolder		horizontally	
+MusicArtist	CopyText	Label	@	45	25	60	25	CopyMusicArtist	Копировать	242:242:242	2:2:2	0	9	systemFont	влево	Label		vertically		
+MusicArtist	CopyText	Label	@	45	25	60	25	CopyMusicArtist	Копировать	242:242:242	2:2:2	0	9	systemFont	влево	Label		horizontally		
+MusicArtist	RenameImage	Image	@	192	25	25	25	RenameViewMusicArtist	242:242:242	242:242:242	0	Rename40x40		vertically	
+MusicArtist	RenameImage	Image	@	192	25	25	25	RenameViewMusicArtist	242:242:242	242:242:242	0	Rename40x40		horizontally	
+MusicArtist	RenameText	Label	@	217	25	75	25	RenameViewMusicArtist	Переименовать	242:242:242	2:2:2	0	9	systemFont	влево	Label		vertically		
+MusicArtist	RenameText	Label	@	217	25	75	25	RenameViewMusicArtist	Переименовать	242:242:242	2:2:2	0	9	systemFont	влево	Label		horizontally		
+MusicArtist	RenameTextName	TextField	@	74	155	200	20				242:242:242	2:2:2	0	9	systemFont		vertically	vertically		
+MusicArtist	RenameMusicArtist	Label	@	275	147	40	40	RenameMusicArtist	ОК	137:137:137	255:255:255	20	19	systemFont	центр	Label		vertically		
+MusicArtist	RenameMusicArtist	Label	@	275	147	40	40	RenameMusicArtist	ОК	137:137:137	255:255:255	20	19	systemFont	центр	Label		horizontally		
+MusicArtist	RenameNameNew	Label	@	2	153	70	25	RenameNameNew	Имя трека	255:255:255	2:2:2	0	12	systemFont	влево	Label		vertically		
+MusicArtist	RenameNameNew	Label	@	2	153	70	25	RenameNameNew	Имя трека	255:255:255	2:2:2	0	12	systemFont	влево	Label		horizontally		
