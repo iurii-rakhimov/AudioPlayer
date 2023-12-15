@@ -1,0 +1,14 @@
+// MusicArtist(FinishPlay).txt
+
+index = ^indexCellListMusicArtist
+
+countCellListMusicArtist = CountCellTableView()
+if ^indexCellListMusicArtist < countCellListMusicArtist
+{
+	^indexCellListMusicArtist++
+}
+else
+{
+	^indexCellListMusicArtist = 0
+}
+DoModule PlayMusicArtist
