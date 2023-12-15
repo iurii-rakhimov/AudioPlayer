@@ -1,0 +1,34 @@
+// MusicArtist(RenameMusicArtist).txt 
+
+RenameNameNew.text = Dictionary("Новое имя")
+NameFileOld = ^NameMusicArtist
+NameFileNew = RenameTextName.text
+
+kv = RenameFile(NameFileOld, NameFileNew)
+if kv != 0
+{
+	SystemError = GetSystemReturn()
+	strError1 = Dictionary("Ошибка")
+	strError2 = Dictionary("при переименовании файла")
+	strMessageError = strError1 + " " + kv + " " + strError2 + " " + SystemError
+	MessageBarDown(strMessageError)
+	NameNewFolder.text = strMessageError
+	return
+}
+l = LengthString(NameFileOld)
+indexStart = l - 5
+nameImageOld = SubString(NameFileOld, 0, indexStart)
+nameImageOld = nameImageOld + ".jpeg"
+
+l = LengthString(NameFileNew)
+indexStart = l - 5
+nameImageNew = SubString(NameFileNew, 0, indexStart)
+nameImageNew = nameImageNew + ".jpeg"
+
+//Print "nameImageOld = " + nameImageOld
+//Print "nameImageNew = " + nameImageNew
+kv = RenameFile(nameImageOld, nameImageNew)
+Print "kv = " + kv
+
+// Переименовали
+DoForm AudioPlayer
