@@ -1,0 +1,14 @@
+// MusicArtist(CopyMusicArtist).txt
+
+NameFile = ^NameMusicArtist
+Path = GetPathDirectoryDocument()
+PathNameFile = Path + NameFile
+lenFile = FileReadBinaryBufferMemory(PathNameFile)
+if lenFile == 0
+{
+	MusicArtist.text = Dictionary("Читать файл не возможно")
+	return
+}
+MusicArtist.text = Dictionary("Файл скопирован в буфер. Выбери папку для переноса трека.")
+
+^FlagAudioPlayer = "Copy"
