@@ -1,0 +1,20 @@
+// MusicArtist(ContinueMusicArtist).txt 
+
+PlayerContinue()
+
+HideObject("ContinueMusicArtist")
+StopMusicArtist.File = "RunStop40x40"
+
+HideObject("RenameImage")
+HideObject("RenameText")
+HideObject("RenameNameNew")
+HideObject("RenameTextName")
+HideObject("RenameMusicArtist")
+
+HideObject("TrashMusicArtist")
+HideObject("TrashText")
+HideObject("CopyMusicArtist")
+HideObject("CopyText")
+
+ShowObject("TimeStart")
+ShowObject("TimeEnd")
