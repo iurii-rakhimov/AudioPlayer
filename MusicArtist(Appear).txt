@@ -1,0 +1,10 @@
+// MusicArtist(Appear).txt 
+
+HideObject("RenameImage")
+HideObject("RenameText")
+HideObject("RenameNameNew")
+HideObject("RenameTextName")
+HideObject("RenameMusicArtist")
+
+HideObject("CopyMusicArtist")
+HideObject("CopyText")
